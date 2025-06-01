@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block title%} OTS - Login Form {%endblock title%}
+
+{% block top%}
+<a href="{% url 'OTS:registraionForm' %}" class="btn btn-outline-primary" role="button">SignIn</a>
+{% endblock top%}
+
+{% block content %}
+<div class="all-forms vstack gap-3">
+    {% if loginError %}
+        <div id="error">{{loginError}}</div>
+    {% endif %}
+    <form action="{% url 'OTS:login' %}" method="post">
+        {% csrf_token %}
+        <div class="form-floating mb-3 p-2">
+            <input type="text" class="form-control" id="floatingInput" name="username" placeholder="username">
+            <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating p-2">
+            <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="d-grid gap-2 p-2">
+            <button class="btn btn-primary" type="reset">Clear</button>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+    New user <a href="{% url 'OTS:registraionForm' %}">Click Here</a>
+</div>
+{% endblock %}

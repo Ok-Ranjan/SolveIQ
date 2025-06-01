@@ -1,0 +1,57 @@
+{% extends "main.html" %}
+
+{% block title%} SolveIQ - Candidate Home Page {%endblock title%}
+
+{% block top%}
+<a href="{% url 'OTS:home' %}" class="btn btn-outline-primary" role="button">Home</a>
+<a href="{% url 'OTS:logout' %}" class="btn btn-outline-primary" role="button">Logout</a>
+{% endblock top%}
+
+{% block content %}
+<section class="text-black text-center py-5">
+  <div class="container">
+    <h1>Welcome {{request.session.name}}, to your home page</h1>
+    <div class="d-grid gap-2">
+        <!-- here "?n=1" go one data through the get method, variable name=n and vaue=1 -->
+        <a href="{% url 'OTS:testPaper' %}?n=1" class="btn btn-outline-primary" role="button">Test of 1 Question</a>
+        <a href="{% url 'OTS:testPaper' %}?n=3" class="btn btn-outline-primary" role="button">Test of 3 Question</a>
+        <a href="{% url 'OTS:testPaper' %}?n=5" class="btn btn-outline-primary" role="button">Test of 5 Question</a>
+        <a href="{% url 'OTS:testPaper' %}?n=10" class="btn btn-outline-primary" role="button">Test of 10 Question</a>
+        <a href="{% url 'OTS:testHistory' %}" class="btn btn-outline-success" role="button">Test History</a>
+        
+        
+        <!-- <a href="{% url 'OTS:testPaper' %}?n=1">Test of 1 Question</a> -->
+    </div>
+    <!-- <div class="button-link">
+        <a href="{% url 'OTS:testPaper' %}?n=3">Test of 3 Question</a> 
+    </div>
+    <div class="button-link">
+        <a href="{% url 'OTS:testPaper' %}?n=5">Test of 5 Question</a> 
+    </div>
+
+    <div class="button-link">
+        <a href="{% url 'OTS:testHistory' %}">Test History</a>
+    </div> -->
+<!--     
+    <h1>Welcome to My Website</h1>
+    <p class="lead">Your tagline or description goes here.</p>
+    <a href="#about" class="btn btn-light">Learn More</a> -->
+  </div>
+</section>
+
+<!-- <h1>Welcome {{request.session.name}}, to your home page</h1>
+<div class="button-link">
+    here "?n=1" go one data through the get method, variable name=n and vaue=1
+    <a href="{% url 'OTS:testPaper' %}?n=1">Test of 1 Question</a>
+</div>
+<div class="button-link">
+    <a href="{% url 'OTS:testPaper' %}?n=3">Test of 3 Question</a> 
+</div>
+<div class="button-link">
+    <a href="{% url 'OTS:testPaper' %}?n=5">Test of 5 Question</a> 
+</div> -->
+
+<!-- <div class="button-link">
+    <a href="{% url 'OTS:testHistory' %}">Test History</a>
+</div> -->
+{% endblock %}

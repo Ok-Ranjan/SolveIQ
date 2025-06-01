@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+
+{% block title%} SolveIQ {%endblock title%}
+
+{% block top%}
+<a href="{% url 'OTS:registraionForm' %}">Signup</a>
+<a href="{% url 'OTS:login' %}">Login</a>
+{% endblock top%}
+
+{% block content %}
+<p>Wlcome to Online Testing Sysytem</p>
+{% endblock %}
