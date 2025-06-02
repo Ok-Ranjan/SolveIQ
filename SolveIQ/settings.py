@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-at*9*exy3k)28_wzp8swgdpmxpw%ini6hl@6kv6_k5d&-pjx-d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['SolveIQ.koyeb.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['okranjan.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
