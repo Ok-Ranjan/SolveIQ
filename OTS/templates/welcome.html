@@ -3,10 +3,25 @@
 {% block title%} SolveIQ {%endblock title%}
 
 {% block top%}
-<a href="{% url 'OTS:registraionForm' %}">Signup</a>
-<a href="{% url 'OTS:login' %}">Login</a>
+<a href="{% url 'OTS:registraionForm' %}" class="btn btn-outline-primary" role="button">Signup</a>
+<a href="{% url 'OTS:login' %}" class="btn btn-outline-primary" role="button">Login</a>
 {% endblock top%}
 
 {% block content %}
-<p>Wlcome to Online Testing Sysytem</p>
+<section class="text-black text-center py-5">
+  <div class="container">
+    <h1>Welcome to Online Testing System</h1>
+    <div class="d-grid gap-2">
+        <!-- here "?n=1" go one data through the get method, variable name=n and vaue=1 -->
+        <a href="{% url 'OTS:login' %}?n=1" class="btn btn-outline-primary" role="button">Test of 1 Question</a>
+        <a href="{% url 'OTS:login' %}?n=3" class="btn btn-outline-primary" role="button">Test of 3 Question</a>
+        <a href="{% url 'OTS:login' %}?n=5" class="btn btn-outline-primary" role="button">Test of 5 Question</a>
+        <a href="{% url 'OTS:login' %}?n=10" class="btn btn-outline-primary" role="button">Test of 10 Question</a>
+        <a href="{% url 'OTS:login' %}" class="btn btn-outline-success" role="button">Test History</a>
+        
+        
+        <!-- <a href="{% url 'OTS:testPaper' %}?n=1">Test of 1 Question</a> -->
+    </div>
+  </div>
+</section>
 {% endblock %}
