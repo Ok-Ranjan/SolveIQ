@@ -60,7 +60,6 @@ Pygments==2.18.0
 pyserial==3.5
 python-dateutil==2.9.0.post0
 pyunormalize==16.0.0
-pywin32==308
 PyYAML==6.0.2
 pyzmq==26.2.0
 reedsolo==1.7.0
